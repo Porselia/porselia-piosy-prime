@@ -6,7 +6,7 @@
   <title>Porselia Piosy Prime · Cocina Italiana</title>
   <meta name="description" content="Restaurante italiano elegante en CDMX. Pastas frescas, pizzas artesanales y vinos selectos en un ambiente íntimo.">
   <meta property="og:title" content="Porselia Piosy Prime" />
-  <meta property="og:description" content="Cocina italiana de autor en un espacio íntimo en Roma Norte." />
+  <meta property="og:description" content="Cocina italiana de autor en un espacio íntimo." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/LOGO%20SIN%20FONDO.png?v=1" />
   <meta name="theme-color" content="#f4efe9" />
@@ -15,18 +15,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root{--beige:#f4efe9; --ink:#141414; --gold:#b78f4b; --ink-60:#14141499; --line:#d9d3cc;}
-    .logo{height:22px;object-fit:contain;filter:none}
     html,body{margin:0;padding:0;background:var(--beige);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
     header{position:sticky;top:0;background:rgba(244,239,233,.85);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line);z-index:30}
     .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-    .brand{letter-spacing:.22em;font-weight:600;font-size:14px;text-transform:uppercase}
-    .brand .sub{display:block;font-size:10px;letter-spacing:.38em;color:var(--ink-60)}
+    .brand{display:flex;align-items:center;gap:10px;letter-spacing:.22em;font-weight:600;font-size:14px;text-transform:uppercase}
+    .logo{height:28px;object-fit:contain}
     .nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-size:14px}
     .btn{display:inline-block;border:1px solid var(--ink);padding:10px 16px;border-radius:999px;text-decoration:none;color:var(--ink);transition:.25s}
     .btn:hover{transform:translateY(-1px)}
     .btn.primary{background:var(--ink);color:var(--beige);border-color:var(--ink)}
-
     .hero{padding:96px 0 60px;}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
     .tag{letter-spacing:.4em;text-transform:uppercase;font-size:12px;color:var(--ink-60)}
@@ -35,7 +33,6 @@
     .card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
     .card .media{aspect-ratio:4/3;background:linear-gradient(135deg,#f7f3ee,#ece7e0)}
     .card .caption{padding:14px 16px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-60)}
-
     .section{padding:64px 0}
     .section h2{font-family:"Playfair Display",serif;font-weight:500;letter-spacing:.04em;margin:0 0 18px}
     .split{display:grid;grid-template-columns:1fr 1fr;gap:28px}
@@ -45,19 +42,15 @@
     .menu .desc{color:var(--ink-60);font-size:14px;margin-top:6px}
     .menu .price{float:right;color:var(--ink-60)}
     .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:12px;color:var(--ink-60);margin-right:6px}
-
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
     .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
-    .tile::before{content:"";display:block;aspect-ratio:1/1;background:linear-gradient(135deg,#f7f3ee,#ece7e0)}
-    .tile .label{position:absolute;left:10px;bottom:10px;background:rgba(20,20,20,.7);color:#fff;padding:6px 8px;border-radius:8px;font-size:12px}
-
+    .tile img{width:100%;height:100%;object-fit:cover;display:block}
+    .tile::before{content:"";display:block;aspect-ratio:1/1}
+    .label{position:absolute;left:10px;bottom:10px;background:rgba(20,20,20,.7);color:#fff;padding:6px 8px;border-radius:8px;font-size:12px}
     .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
-
     .bar{display:flex;gap:8px;align-items:center;color:var(--ink-60)}
     .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
-
     footer{padding:56px 0;border-top:1px solid var(--line);color:var(--ink-60)}
-
     @media (max-width:900px){
       .hero-grid{grid-template-columns:1fr}
       .split{grid-template-columns:1fr}
@@ -65,24 +58,14 @@
       .gallery{grid-template-columns:repeat(2,1fr)}
     }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Restaurant",
-    "name":"Porselia Piosy Prime",
-    "servesCuisine":"Italian",
-    "address":{"@type":"PostalAddress","streetAddress":"Margaritas 29-Interior 5","addressLocality":"Florida","addressRegion":"CDMX","postalCode":"01030","addressCountry":"MX"},
-    "telephone":"+52 55 0000 0000",
-    "priceRange":"$$$",
-    "openingHours":"Tu-Su 13:00-24:00",
-    "url":"https://porseliapiosyprime.example"
-  }
-  </script>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand"><img class="logo" src="assets/LOGO%20SIN%20FONDO.png?v=1" alt="Porselia Piosy Prime" /></div>
+      <div class="brand">
+        <img class="logo" src="assets/LOGO%20SIN%20FONDO.png?v=1" alt="Porselia Piosy Prime" />
+        <span>PORSELIA PIOSY PRIME</span>
+      </div>
       <nav>
         <a href="#menu">Menú</a>
         <a href="#galeria">Galería</a>
@@ -110,12 +93,12 @@
             <input type="date" name="fecha" required style="padding:10px;border:1px solid var(--line);border-radius:10px;">
             <input type="time" name="hora" required style="padding:10px;border:1px solid var(--line);border-radius:10px;">
             <input type="number" name="personas" placeholder="Personas" min="1" required style="padding:10px;border:1px solid var(--line);border-radius:10px;">
-            <textarea name="comentarios" placeholder="Comentarios (opcional)\" rows="3" style="padding:10px;border:1px solid var(--line);border-radius:10px"></textarea>
+            <textarea name="comentarios" placeholder="Comentarios (opcional)" rows="3" style="padding:10px;border:1px solid var(--line);border-radius:10px"></textarea>
             <button class="btn primary" type="submit">Enviar solicitud</button>
             <small class="bar"><span class="dot"></span>También atendemos reservas por WhatsApp.</small>
           </form>
 
-          <div class="bar" style="margin-top:16px"><span class="dot"></span> Roma Norte · CDMX · Cocina italiana</div>
+          <div class="bar" style="margin-top:16px"><span class="dot"></span> Florida · CDMX · Cocina italiana</div>
         </div>
         <div class="card">
           <div class="media"></div>
@@ -201,15 +184,33 @@
       <div class="container">
         <h2>Galería</h2>
         <div class="gallery">
-          <div class="tile"><div class="label">Pasta fresca</div></div>
-          <div class="tile"><div class="label">Pizza al horno</div></div>
-          <div class="tile"><div class="label">Antipasti</div></div>
-          <div class="tile"><div class="label">Dolci</div></div>
-          <div class="tile"><div class="label">Vinos</div></div>
-          <div class="tile"><div class="label">Ambiente</div></div>
+          <figure class="tile">
+            <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=800&auto=format&fit=crop" alt="Pasta fresca">
+            <figcaption class="label">Pasta fresca</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="https://images.unsplash.com/photo-1541745537413-b804f0f39f9f?q=80&w=800&auto=format&fit=crop" alt="Pizza al horno">
+            <figcaption class="label">Pizza al horno</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="https://images.unsplash.com/photo-1604908176997-4314fe29d2ea?q=80&w=800&auto=format&fit=crop" alt="Antipasti">
+            <figcaption class="label">Antipasti</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="https://images.unsplash.com/photo-1541782814452-dc8e95a8c1a9?q=80&w=800&auto=format&fit=crop" alt="Dolci">
+            <figcaption class="label">Dolci</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f4?q=80&w=800&auto=format&fit=crop" alt="Vinos">
+            <figcaption class="label">Vinos</figcaption>
+          </figure>
+          <figure class="tile">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Ambiente">
+            <figcaption class="label">Ambiente</figcaption>
+          </figure>
         </div>
         <div class="cta">
-          <a class="btn" href="https://instagram.com" target="_blank" rel="noreferrer">Síguenos en Instagram</a>
+          <a class="btn" href="https://www.instagram.com/porselia.piosy/" target="_blank" rel="noopener">Síguenos en Instagram</a>
           <a class="btn" href="#reservar">Reservar</a>
         </div>
       </div>
@@ -219,7 +220,10 @@
   <footer>
     <div class="container" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px">
       <div>
-        <div class="brand" style="margin-bottom:10px">PORSELIA PIOSY<span class="sub">PRIME</span></div>
+        <div class="brand" style="margin-bottom:10px">
+          <img class="logo" src="assets/LOGO%20SIN%20FONDO.png?v=1" alt="Porselia Piosy Prime" />
+          <span>PORSELIA PIOSY <span class="sub" style="letter-spacing:.38em;font-size:10px;color:var(--ink-60)">PRIME</span></span>
+        </div>
         <div>Margaritas 29-Interior 5, Florida, Álvaro Obregón, 01030 Ciudad de México, CDMX</div>
         <div>+52 55 0000 0000</div>
         <div>Horarios: Mar–Dom · 13:00 – 00:00</div>
@@ -230,7 +234,7 @@
       </div>
       <div>
         <div style="font-weight:600;margin-bottom:8px">Redes</div>
-        <div><a href="https://instagram.com" style="color:var(--ink)">Instagram</a></div>
+        <div><a href="https://www.instagram.com/porselia.piosy/" style="color:var(--ink)" target="_blank" rel="noopener">Instagram</a></div>
       </div>
     </div>
     <div class="container" style="margin-top:24px;font-size:12px">© <span id="y"></span> Porselia Piosy Prime · Sitio demostrativo</div>
@@ -238,10 +242,8 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-  <script>
-    // Configura tu correo real aquí:
-    const TO_EMAIL = "isilevyg@gmail.com"; // ← reemplázalo por tu correo real
+    // Envío por correo (abre cliente del usuario)
+    const TO_EMAIL = "isilevyg@gmail.com";
     const form = document.getElementById('form-reservas');
     if(form){
       form.addEventListener('submit', (e)=>{
