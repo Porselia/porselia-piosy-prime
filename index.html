@@ -8,19 +8,19 @@
   <meta property="og:title" content="Porselia Piosy Prime" />
   <meta property="og:description" content="Cocina italiana de autor en un espacio íntimo en Roma Norte." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/logo.png" />
+  <meta property="og:image" content="assets/logo.png?v=1" />
   <meta name="theme-color" content="#f4efe9" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root{--beige:#f4efe9; --ink:#141414; --gold:#b78f4b; --ink-60:#14141499; --line:#d9d3cc;}
-    .logo{height:22px;object-fit:contain;filter:none}
+    .logo{height:40px;object-fit:contain;filter:none}
     html,body{margin:0;padding:0;background:var(--beige);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
     .container{max-width:1100px;margin:0 auto;padding:0 20px}
     header{position:sticky;top:0;background:rgba(244,239,233,.85);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line);z-index:30}
     .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-    .brand{letter-spacing:.22em;font-weight:600;font-size:14px;text-transform:uppercase}
+    .brand{letter-spacing:.22em;font-weight:600;font-size:14px;text-transform:uppercase;display:flex;align-items:center;gap:10px}
     .brand .sub{display:block;font-size:10px;letter-spacing:.38em;color:var(--ink-60)}
     .nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-size:14px}
     .btn{display:inline-block;border:1px solid var(--ink);padding:10px 16px;border-radius:999px;text-decoration:none;color:var(--ink);transition:.25s}
@@ -65,24 +65,14 @@
       .gallery{grid-template-columns:repeat(2,1fr)}
     }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Restaurant",
-    "name":"Porselia Piosy Prime",
-    "servesCuisine":"Italian",
-    "address":{"@type":"PostalAddress","streetAddress":"Margaritas 29-Interior 5","addressLocality":"Florida","addressRegion":"CDMX","postalCode":"01030","addressCountry":"MX"},
-    "telephone":"+52 55 0000 0000",
-    "priceRange":"$$$",
-    "openingHours":"Tu-Su 13:00-24:00",
-    "url":"https://porseliapiosyprime.example"
-  }
-  </script>
 </head>
 <body>
   <header>
     <div class="container nav">
-      <div class="brand"><img class="logo" src="assets/logo.png" alt="Porselia Piosy Prime" /></div>
+      <div class="brand">
+        <img class="logo" src="assets/logo.png?v=1" alt="Porselia Piosy Prime" />
+        <span>PORSELIA PIOSY PRIME</span>
+      </div>
       <nav>
         <a href="#menu">Menú</a>
         <a href="#galeria">Galería</a>
