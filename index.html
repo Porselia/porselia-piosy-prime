@@ -46,10 +46,10 @@
   .menu .price{float:right;color:var(--ink-60)}
   .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:12px;color:var(--ink-60);margin-right:6px}
 
-  /* GALERÍA */
+  /* (Se dejan estilos de galería por si a futuro se vuelve a activar) */
   .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
   .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;aspect-ratio:4/3}
-  .tile img{width:100%;height:100%;object-fit:cover;display:block} /* SIEMPRE visible y llenando el cuadro */
+  .tile img{width:100%;height:100%;object-fit:cover;display:block}
   .label{position:absolute;left:10px;bottom:10px;background:rgba(20,20,20,.75);color:#fff;padding:6px 8px;border-radius:8px;font-size:12px}
 
   .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
@@ -63,7 +63,6 @@
     .gallery{grid-template-columns:repeat(2,1fr)}
   }
 
-  /* Instagram widget */
   .ig-embed{border:none;padding:0;margin:0}
   .ig-embed iframe{width:100%;border:0;overflow:hidden}
 </style>
@@ -77,7 +76,6 @@
     </div>
     <nav>
       <a href="#menu">Menú</a>
-      <a href="#galeria">Galería</a>
       <a href="https://www.instagram.com/porselia.piosy/" class="btn" target="_blank" rel="noopener">Redes</a>
     </nav>
   </div>
@@ -189,49 +187,6 @@
       </div>
     </div>
   </section>
-
-  <!-- GALERÍA -->
-  <section class="section" id="galeria">
-    <div class="container">
-      <h2>Galería</h2>
-
-      <!-- A) Instagram (FIX: usar cdn.lightwidget.com) -->
-      <div class="ig-embed" id="ig-widget">
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-        <iframe src="https://cdn.lightwidget.com/widgets/7914ea3da13755e78f4532f0c7d35352.html"
-                title="Instagram feed"
-                scrolling="no" allowtransparency="true"
-                class="lightwidget-widget" style="width:100%;border:0;overflow:hidden"></iframe>
-      </div>
-
-      <!-- B) Fallback con fotos (se oculta si el iframe carga) -->
-      <div class="gallery" id="fallback" style="margin-top:18px">
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=1080&auto=format&fit=crop" alt="Pasta fresca"><figcaption class="label">Pasta fresca</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1541745537413-b804f0f39f9f?q=80&w=1080&auto=format&fit=crop" alt="Pizza al horno"><figcaption class="label">Pizza al horno</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1604908176997-4314fe29d2ea?q=80&w=1080&auto=format&fit=crop" alt="Antipasti"><figcaption class="label">Antipasti</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1541782814452-dc8e95a8c1a9?q=80&w=1080&auto=format&fit=crop" alt="Dolci"><figcaption class="label">Dolci</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f4?q=80&w=1080&auto=format&fit=crop" alt="Vinos"><figcaption class="label">Vinos</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1080&auto=format&fit=crop" alt="Ambiente"><figcaption class="label">Ambiente</figcaption>
-        </figure>
-      </div>
-
-      <div class="cta">
-        <a class="btn" href="https://www.instagram.com/porselia.piosy/" target="_blank" rel="noopener">Síguenos en Instagram</a>
-        <a class="btn" href="#reservar">Reservar</a>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -258,15 +213,6 @@
 
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
-
-  // Oculta el fallback si el widget carga bien
-  window.addEventListener('load', () => {
-    const frame = document.querySelector('.lightwidget-widget');
-    const fb = document.getElementById('fallback');
-    if(frame && fb){
-      setTimeout(()=>{ if(frame.clientHeight > 120) fb.style.display = 'none'; }, 1200);
-    }
-  });
 
   // Envío por correo (abre el cliente del visitante)
   const TO_EMAIL = "isilevyg@gmail.com";
