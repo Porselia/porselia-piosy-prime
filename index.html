@@ -1,287 +1,131 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Porselia Piosy Prime · Cocina Italiana</title>
-<meta name="description" content="Restaurante italiano elegante en CDMX. Pastas frescas, pizzas artesanales y vinos selectos en un ambiente íntimo.">
-<meta property="og:title" content="Porselia Piosy Prime" />
-<meta property="og:description" content="Cocina italiana de autor en un espacio íntimo." />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="assets/LOGO%20SIN%20FONDO.png?v=3" />
-<meta name="theme-color" content="#f4efe9" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{--beige:#f4efe9; --ink:#141414; --gold:#b78f4b; --ink-60:#14141499; --line:#d9d3cc;}
-  html,body{margin:0;padding:0;background:var(--beige);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
-  .container{max-width:1100px;margin:0 auto;padding:0 20px}
-  header{position:sticky;top:0;background:rgba(244,239,233,.85);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line);z-index:30}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .brand{display:flex;align-items:center;gap:10px;letter-spacing:.22em;font-weight:600;font-size:14px;text-transform:uppercase}
-  .logo{height:28px;object-fit:contain}
-  .nav a{color:var(--ink);text-decoration:none;margin-left:22px;font-size:14px}
-  .btn{display:inline-block;border:1px solid var(--ink);padding:10px 16px;border-radius:999px;text-decoration:none;color:var(--ink);transition:.25s}
-  .btn:hover{transform:translateY(-1px)}
-  .btn.primary{background:var(--ink);color:var(--beige);border-color:var(--ink)}
-
-  .hero{padding:96px 0 60px;}
-  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-  .tag{letter-spacing:.4em;text-transform:uppercase;font-size:12px;color:var(--ink-60)}
-  h1{font-family:"Playfair Display",serif;font-weight:500;letter-spacing:.06em;line-height:1.12;margin:.2em 0 .4em}
-  .lede{font-size:18px;color:var(--ink-60);max-width:50ch}
-  .card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
-  .card .media{aspect-ratio:4/3;background:linear-gradient(135deg,#f7f3ee,#ece7e0)}
-  .card .caption{padding:14px 16px;border-top:1px solid var(--line);font-size:13px;color:var(--ink-60)}
-
-  .section{padding:64px 0}
-  .section h2{font-family:"Playfair Display",serif;font-weight:500;letter-spacing:.04em;margin:0 0 18px}
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-
-  .menu{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .menu .item{padding:18px;border-bottom:1px dashed var(--line)}
-  .menu .name{font-weight:600}
-  .menu .desc{color:var(--ink-60);font-size:14px;margin-top:6px}
-  .menu .price{float:right;color:var(--ink-60)}
-  .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:12px;color:var(--ink-60);margin-right:6px}
-
-  /* GALERÍA */
-  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;aspect-ratio:4/3}
-  .tile img{width:100%;height:100%;object-fit:cover;display:block} /* SIEMPRE visible y llenando el cuadro */
-  .label{position:absolute;left:10px;bottom:10px;background:rgba(20,20,20,.75);color:#fff;padding:6px 8px;border-radius:8px;font-size:12px}
-
-  .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
-  .bar{display:flex;gap:8px;align-items:center;color:var(--ink-60)}
-  .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
-  footer{padding:56px 0;border-top:1px solid var(--line);color:var(--ink-60)}
-  @media (max-width:900px){
-    .hero-grid{grid-template-columns:1fr}
-    .split{grid-template-columns:1fr}
-    .menu{grid-template-columns:1fr}
-    .gallery{grid-template-columns:repeat(2,1fr)}
-  }
-
-  /* Instagram widget */
-  .ig-embed{border:none;padding:0;margin:0}
-  .ig-embed iframe{width:100%;border:0;overflow:hidden}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porselia Piosy Prime</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e9df;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f3e9df;
+            padding: 10px 20px;
+        }
+        header img.logo {
+            height: 60px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .menu-item h3 {
+            margin: 0;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f3e9df;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
+
 <header>
-  <div class="container nav">
-    <div class="brand">
-      <img class="logo" src="assets/LOGO%20SIN%20FONDO.png?v=3" alt="Porselia Piosy Prime" />
-      <span>PORSELIA PIOSY PRIME</span>
-    </div>
+    <img src="assets/LOGO%20SIN%20FONDO.png" alt="Porselia Piosy Prime" class="logo">
     <nav>
-      <a href="#menu">Menú</a>
-      <a href="#galeria">Galería</a>
-      <a href="https://www.instagram.com/porselia.piosy/" class="btn" target="_blank" rel="noopener">Redes</a>
+        <a href="#menu">Menú</a>
+        <a href="https://www.instagram.com/porselia.piosy/" target="_blank">Redes</a>
+        <a href="#reservar">Reservar</a>
     </nav>
-  </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="tag">Cocina italiana de autor</div>
-        <h1>Un rincón íntimo para celebrar el sabor y la historia.</h1>
-        <p class="lede">Pastas frescas, pizzas al horno y vinos seleccionados en un espacio acogedor inspirado en la elegancia italiana. Cada detalle fue pensado para que la noche cuente una historia.</p>
-        <div class="cta">
-          <a id="reservar" href="https://wa.me/525500000000?text=Hola,%20quisiera%20reservar%20en%20Porselia%20Piosy%20Prime" class="btn primary">Reservar por WhatsApp</a>
-          <a href="#menu" class="btn">Ver menú</a>
-          <a href="https://www.google.com/maps?q=Margaritas%2029-Interior%205,%20Florida,%20%C3%81lvaro%20Obreg%C3%B3n,%2001030%20Ciudad%20de%20M%C3%A9xico,%20CDMX" target="_blank" class="btn">Cómo llegar</a>
+<section id="menu">
+    <h2>Menú</h2>
+    <div class="menu-grid">
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Pasta fresca">
+            <h3>Pasta fresca</h3>
         </div>
-
-        <form id="form-reservas" style="margin-top:16px;display:grid;gap:10px;max-width:420px">
-          <input type="text" name="nombre" placeholder="Nombre" required style="padding:10px;border:1px solid var(--line);border-radius:10px;">
-          <input type="tel" name="telefono" placeholder="Teléfono" required style="padding:10px;border:1px solid var(--line);border-radius:10px;">
-          <input type="date" name="fecha" required style="padding:10px;border:1px solid var(--line);border-radius:10px;">
-          <input type="time" name="hora" required style="padding:10px;border:1px solid var(--line);border-radius:10px;">
-          <input type="number" name="personas" placeholder="Personas" min="1" required style="padding:10px;border:1px solid var(--line);border-radius:10px;">
-          <textarea name="comentarios" placeholder="Comentarios (opcional)" rows="3" style="padding:10px;border:1px solid var(--line);border-radius:10px"></textarea>
-          <button class="btn primary" type="submit">Enviar solicitud</button>
-          <small class="bar"><span class="dot"></span>También atendemos reservas por WhatsApp.</small>
-        </form>
-
-        <div class="bar" style="margin-top:16px"><span class="dot"></span> Florida · CDMX · Cocina italiana</div>
-      </div>
-      <div class="card">
-        <div class="media"></div>
-        <div class="caption">Pasta fresca del día · Aceite de oliva toscano · Parmesano DOP</div>
-      </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366" alt="Pizza al horno">
+            <h3>Pizza al horno</h3>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1625944230945-87c3c7eca6e4" alt="Antipasti">
+            <h3>Antipasti</h3>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1604908176997-5ad5b1a6f38a" alt="Dolci">
+            <h3>Dolci</h3>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1621973495028-1f2ab9d3c8f8" alt="Vinos">
+            <h3>Vinos</h3>
+        </div>
+        <div class="menu-item">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Ambiente">
+            <h3>Ambiente</h3>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- MENÚ -->
-  <section class="section" id="menu">
-    <div class="container">
-      <h2>Menú</h2>
-      <div class="split">
-        <div class="card" style="padding:18px">
-          <div class="pill">Antipasti</div>
-          <div class="menu">
-            <div class="item"><span class="name">Bruschetta al Pomodoro</span> <span class="price">160</span><div class="desc">Pan rústico, tomate heirloom, albahaca y AOVE.</div></div>
-            <div class="item"><span class="name">Caprese</span> <span class="price">240</span><div class="desc">Mozzarella di bufala, pesto, balsámico.</div></div>
-            <div class="item"><span class="name">Carpaccio di Manzo</span> <span class="price">280</span><div class="desc">Filete de res, limón, alcaparras, parmesano.</div></div>
-            <div class="item"><span class="name">Zucchine alla Griglia</span> <span class="price">180</span><div class="desc">Calabacín a la parrilla, hierbas mediterráneas.</div></div>
-            <div class="item"><span class="name">Antipasto della Casa</span> <span class="price">260</span><div class="desc">Selección de embutidos, quesos y aceitunas.</div></div>
-          </div>
-        </div>
-        <div class="card" style="padding:18px">
-          <div class="pill">Paste & Risotti</div>
-          <div class="menu">
-            <div class="item"><span class="name">Tagliatelle ai Funghi Porcini</span> <span class="price">320</span><div class="desc">Setas, mantequilla avellanada, toque de trufa.</div></div>
-            <div class="item"><span class="name">Spaghetti alla Carbonara</span> <span class="price">300</span><div class="desc">Guanciale, yema, pecorino romano.</div></div>
-            <div class="item"><span class="name">Risotto al Limone e Gamberi</span> <span class="price">340</span><div class="desc">Limón siciliano, camarón, parmesano.</div></div>
-            <div class="item"><span class="name">Gnocchi di Spinaci</span> <span class="price">290</span><div class="desc">Ñoquis de espinaca con gorgonzola.</div></div>
-            <div class="item"><span class="name">Penne all’Arrabbiata</span> <span class="price">280</span><div class="desc">Salsa de tomate picante y ajo.</div></div>
-            <div class="item"><span class="name">Risotto allo Zafferano</span> <span class="price">330</span><div class="desc">Azafrán, mantequilla y parmesano.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="split" style="margin-top:18px">
-        <div class="card" style="padding:18px">
-          <div class="pill">Pizze</div>
-          <div class="menu">
-            <div class="item"><span class="name">Margherita</span> <span class="price">220</span><div class="desc">San Marzano, fior di latte, albahaca.</div></div>
-            <div class="item"><span class="name">Diavola</span> <span class="price">260</span><div class="desc">Salami picante, chile seco, mozzarella.</div></div>
-            <div class="item"><span class="name">Tartufo</span> <span class="price">310</span><div class="desc">Base bianca, setas, aceite de trufa.</div></div>
-            <div class="item"><span class="name">Prosciutto e Rucola</span> <span class="price">290</span><div class="desc">Jamón curado italiano y rúcula fresca.</div></div>
-            <div class="item"><span class="name">Quattro Formaggi</span> <span class="price">300</span><div class="desc">Mozzarella, gorgonzola, fontina y parmesano.</div></div>
-          </div>
-        </div>
-        <div class="card" style="padding:18px">
-          <div class="pill">Dolci · Vini</div>
-          <div class="menu">
-            <div class="item"><span class="name">Tiramisù</span> <span class="price">160</span><div class="desc">Mascarpone, café espresso, cacao amargo.</div></div>
-            <div class="item"><span class="name">Panna Cotta</span> <span class="price">150</span><div class="desc">Vainilla, frutos rojos.</div></div>
-            <div class="item"><span class="name">Gelato Artigianale</span> <span class="price">140</span><div class="desc">Pistacho, stracciatella, nocciola.</div></div>
-            <div class="item"><span class="name">Copa de Chianti</span> <span class="price">220</span><div class="desc">Selección de la casa.</div></div>
-            <div class="item"><span class="name">Prosecco</span> <span class="price">210</span><div class="desc">Brut italiano, fresco y burbujeante.</div></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="split" style="margin-top:18px">
-        <div class="card" style="padding:18px">
-          <div class="pill">Secondi</div>
-          <div class="menu">
-            <div class="item"><span class="name">Tagliata di Manzo</span> <span class="price">420</span><div class="desc">Lomo de res sellado, rúcula y parmesano.</div></div>
-            <div class="item"><span class="name">Branzino al Forno</span> <span class="price">410</span><div class="desc">Lubina al horno con limón y hierbas.</div></div>
-            <div class="item"><span class="name">Ossobuco alla Milanese</span> <span class="price">450</span><div class="desc">Ternera estofada, gremolata y risotto.</div></div>
-          </div>
-        </div>
-        <div class="card" style="padding:18px">
-          <div class="pill">Caffè · Digestivi</div>
-          <div class="menu">
-            <div class="item"><span class="name">Espresso</span> <span class="price">65</span><div class="desc">Blend italiano intenso.</div></div>
-            <div class="item"><span class="name">Affogato</span> <span class="price">120</span><div class="desc">Gelato de vainilla bañado en espresso.</div></div>
-            <div class="item"><span class="name">Limoncello</span> <span class="price">130</span><div class="desc">Digestivo casero, frío.</div></div>
-            <div class="item"><span class="name">Negroni</span> <span class="price">190</span><div class="desc">Gin, vermut rosso y Campari.</div></div>
-            <div class="item"><span class="name">Aperol Spritz</span> <span class="price">180</span><div class="desc">Aperol, prosecco y soda.</div></div>
-          </div>
-        </div>
-      </div>
+<section id="reservar">
+    <h2>Reservar</h2>
+    <p style="text-align:center;">Para reservar tu mesa, haz clic en el siguiente botón:</p>
+    <div style="text-align:center;">
+        <a href="https://wa.me/5215512345678" class="btn" target="_blank">Reservar vía WhatsApp</a>
     </div>
-  </section>
-
-  <!-- GALERÍA -->
-  <section class="section" id="galeria">
-    <div class="container">
-      <h2>Galería</h2>
-
-      <!-- A) Instagram (FIX: usar cdn.lightwidget.com) -->
-      <div class="ig-embed" id="ig-widget">
-        <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-        <iframe src="https://cdn.lightwidget.com/widgets/7914ea3da13755e78f4532f0c7d35352.html"
-                title="Instagram feed"
-                scrolling="no" allowtransparency="true"
-                class="lightwidget-widget" style="width:100%;border:0;overflow:hidden"></iframe>
-      </div>
-
-      <!-- B) Fallback con fotos (se oculta si el iframe carga) -->
-      <div class="gallery" id="fallback" style="margin-top:18px">
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=1080&auto=format&fit=crop" alt="Pasta fresca"><figcaption class="label">Pasta fresca</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1541745537413-b804f0f39f9f?q=80&w=1080&auto=format&fit=crop" alt="Pizza al horno"><figcaption class="label">Pizza al horno</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1604908176997-4314fe29d2ea?q=80&w=1080&auto=format&fit=crop" alt="Antipasti"><figcaption class="label">Antipasti</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1541782814452-dc8e95a8c1a9?q=80&w=1080&auto=format&fit=crop" alt="Dolci"><figcaption class="label">Dolci</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f4?q=80&w=1080&auto=format&fit=crop" alt="Vinos"><figcaption class="label">Vinos</figcaption>
-        </figure>
-        <figure class="tile">
-          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1080&auto=format&fit=crop" alt="Ambiente"><figcaption class="label">Ambiente</figcaption>
-        </figure>
-      </div>
-
-      <div class="cta">
-        <a class="btn" href="https://www.instagram.com/porselia.piosy/" target="_blank" rel="noopener">Síguenos en Instagram</a>
-        <a class="btn" href="#reservar">Reservar</a>
-      </div>
-    </div>
-  </section>
-</main>
+</section>
 
 <footer>
-  <div class="container" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px">
-    <div>
-      <div class="brand" style="margin-bottom:10px">
-        <img class="logo" src="assets/LOGO%20SIN%20FONDO.png?v=3" alt="Porselia Piosy Prime" />
-        <span>PORSELIA PIOSY <span class="sub" style="letter-spacing:.38em;font-size:10px;color:var(--ink-60)">PRIME</span></span>
-      </div>
-      <div>Margaritas 29-Interior 5, Florida, Álvaro Obregón, 01030 Ciudad de México, CDMX</div>
-      <div>Horarios: Mar–Dom · 13:00 – 00:00</div>
-    </div>
-    <div>
-      <div style="font-weight:600;margin-bottom:8px">Reservas</div>
-      <div><a class="btn" href="https://wa.me/525500000000?text=Hola,%20quiero%20reservar%20en%20Porselia%20Piosy%20Prime">WhatsApp</a></div>
-    </div>
-    <div>
-      <div style="font-weight:600;margin-bottom:8px">Redes</div>
-      <div><a href="https://www.instagram.com/porselia.piosy/" style="color:var(--ink)" target="_blank" rel="noopener">Instagram</a></div>
-    </div>
-  </div>
-  <div class="container" style="margin-top:24px;font-size:12px">© <span id="y"></span> Porselia Piosy Prime · Sitio demostrativo</div>
+    <p>&copy; 2025 Porselia Piosy Prime</p>
 </footer>
 
-<script>
-  document.getElementById('y').textContent = new Date().getFullYear();
-
-  // Oculta el fallback si el widget carga bien
-  window.addEventListener('load', () => {
-    const frame = document.querySelector('.lightwidget-widget');
-    const fb = document.getElementById('fallback');
-    if(frame && fb){
-      setTimeout(()=>{ if(frame.clientHeight > 120) fb.style.display = 'none'; }, 1200);
-    }
-  });
-
-  // Envío por correo (abre el cliente del visitante)
-  const TO_EMAIL = "isilevyg@gmail.com";
-  const form = document.getElementById('form-reservas');
-  if(form){
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const d = new FormData(form);
-      const params = new URLSearchParams({
-        subject: `Reserva · ${d.get('nombre')} · ${d.get('fecha')} ${d.get('hora')}`,
-        body: `Nombre: ${d.get('nombre')}%0ATeléfono: ${d.get('telefono')}%0AFecha: ${d.get('fecha')}%0AHora: ${d.get('hora')}%0APersonas: ${d.get('personas')}%0AComentarios: ${encodeURIComponent(d.get('comentarios')||'')}%0A`
-      });
-      window.location.href = `mailto:${TO_EMAIL}?${params.toString()}`;
-    });
-  }
-</script>
 </body>
 </html>
