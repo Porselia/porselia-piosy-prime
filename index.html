@@ -8,7 +8,7 @@
   <meta property="og:title" content="Porselia Piosy Prime" />
   <meta property="og:description" content="Cocina italiana de autor en un espacio íntimo." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/LOGO%20SIN%20FONDO.png?v=1" />
+  <meta property="og:image" content="assets/LOGO%20SIN%20FONDO.png?v=2" />
   <meta name="theme-color" content="#f4efe9" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,8 +45,8 @@
 
     /* Galería */
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
-    /* SIN recorte: mostramos imagen completa */
+    .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center}
+    /* Mostrar imagen completa sin recortar */
     .tile img{width:100%;height:auto;display:block}
     .label{position:absolute;left:10px;bottom:10px;background:rgba(20,20,20,.7);color:#fff;padding:6px 8px;border-radius:8px;font-size:12px}
 
@@ -61,7 +61,7 @@
       .gallery{grid-template-columns:repeat(2,1fr)}
     }
 
-    /* Estilos Instagram widget (se adapta al ancho) */
+    /* Instagram widget */
     .ig-embed{border:none;padding:0;margin:0}
     .ig-embed iframe{width:100%;border:0;overflow:hidden}
   </style>
@@ -70,13 +70,13 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <img class="logo" src="assets/LOGO%20SIN%20FONDO.png?v=1" alt="Porselia Piosy Prime" />
+        <img class="logo" src="assets/LOGO%20SIN%20FONDO.png?v=2" alt="Porselia Piosy Prime" />
         <span>PORSELIA PIOSY PRIME</span>
       </div>
       <nav>
         <a href="#menu">Menú</a>
         <a href="#galeria">Galería</a>
-        <a href="https://www.instagram.com/porselia.piosy/" class="btn">Redes</a>
+        <a href="https://www.instagram.com/porselia.piosy/" class="btn" target="_blank" rel="noopener">Redes</a>
       </nav>
     </div>
   </header>
@@ -188,40 +188,40 @@
       </div>
     </section>
 
-    <!-- GALERÍA (se actualiza sola con tu Instagram) -->
+    <!-- GALERÍA -->
     <section class="section" id="galeria">
       <div class="container">
         <h2>Galería</h2>
 
-        <!-- Opción A: Instagram (recomendado). Genera tu widget y reemplaza el SRC del iframe -->
-        <div class="ig-embed">
+        <!-- A) Tu Instagram (widget) -->
+        <div class="ig-embed" id="ig-widget">
+          <!-- LightWidget WIDGET -->
           <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-         
-          <iframe src="<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/7914ea3da13755e78f4532f0c7d35352.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>"
+          <iframe src="https://lightwidget.com/widgets/7914ea3da13755e78f4532f0c7d35352.html"
                   title="Instagram feed"
                   scrolling="no" allowtransparency="true"
                   class="lightwidget-widget" style="width:100%;border:0;overflow:hidden"></iframe>
         </div>
 
-        <!-- Opción B (fallback): cuadrícula estática SIN recorte (borra si ya usas el widget) -->
-        <div class="gallery" style="margin-top:18px">
+        <!-- B) Fallback con fotos (se oculta si carga el widget) -->
+        <div class="gallery" id="fallback" style="margin-top:18px">
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=1080&auto=format&fit=crop" alt="Pasta fresca"><figcaption class="label">Pasta fresca</figcaption>
+            <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=1080&auto=format&fit=max" alt="Pasta fresca"><figcaption class="label">Pasta fresca</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1541745537413-b804f0f39f9f?q=80&w=1080&auto=format&fit=crop" alt="Pizza al horno"><figcaption class="label">Pizza al horno</figcaption>
+            <img src="https://images.unsplash.com/photo-1541745537413-b804f0f39f9f?q=80&w=1080&auto=format&fit=max" alt="Pizza al horno"><figcaption class="label">Pizza al horno</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1604908176997-4314fe29d2ea?q=80&w=1080&auto=format&fit=crop" alt="Antipasti"><figcaption class="label">Antipasti</figcaption>
+            <img src="https://images.unsplash.com/photo-1604908176997-4314fe29d2ea?q=80&w=1080&auto=format&fit=max" alt="Antipasti"><figcaption class="label">Antipasti</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1541782814452-dc8e95a8c1a9?q=80&w=1080&auto=format&fit=crop" alt="Dolci"><figcaption class="label">Dolci</figcaption>
+            <img src="https://images.unsplash.com/photo-1541782814452-dc8e95a8c1a9?q=80&w=1080&auto=format&fit=max" alt="Dolci"><figcaption class="label">Dolci</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f4?q=80&w=1080&auto=format&fit=crop" alt="Vinos"><figcaption class="label">Vinos</figcaption>
+            <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f4?q=80&w=1080&auto=format&fit=max" alt="Vinos"><figcaption class="label">Vinos</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1080&auto=format&fit=crop" alt="Ambiente"><figcaption class="label">Ambiente</figcaption>
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1080&auto=format&fit=max" alt="Ambiente"><figcaption class="label">Ambiente</figcaption>
           </figure>
         </div>
 
@@ -237,7 +237,7 @@
     <div class="container" style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px">
       <div>
         <div class="brand" style="margin-bottom:10px">
-          <img class="logo" src="assets/LOGO%20SIN%20FONDO.png?v=1" alt="Porselia Piosy Prime" />
+          <img class="logo" src="assets/LOGO%20SIN%20FONDO.png?v=2" alt="Porselia Piosy Prime" />
           <span>PORSELIA PIOSY <span class="sub" style="letter-spacing:.38em;font-size:10px;color:var(--ink-60)">PRIME</span></span>
         </div>
         <div>Margaritas 29-Interior 5, Florida, Álvaro Obregón, 01030 Ciudad de México, CDMX</div>
@@ -258,7 +258,17 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Envío por correo (abre el cliente de correo del visitante)
+    // Esconde el fallback cuando carga el widget
+    window.addEventListener('load', () => {
+      const frame = document.querySelector('.lightwidget-widget');
+      const fb = document.getElementById('fallback');
+      if(frame && fb){
+        // Si el iframe logra tener altura, ocultamos fallback
+        setTimeout(()=>{ if(frame.clientHeight > 100) fb.style.display = 'none'; }, 1200);
+      }
+    });
+
+    // Envío por correo (abre cliente del visitante)
     const TO_EMAIL = "isilevyg@gmail.com";
     const form = document.getElementById('form-reservas');
     if(form){
