@@ -42,11 +42,14 @@
     .menu .desc{color:var(--ink-60);font-size:14px;margin-top:6px}
     .menu .price{float:right;color:var(--ink-60)}
     .pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:12px;color:var(--ink-60);margin-right:6px}
+
+    /* Galería */
     .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
     .tile{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}
-    .tile img{width:100%;height:100%;object-fit:cover;display:block}
-    .tile::before{content:"";display:block;aspect-ratio:1/1}
+    /* SIN recorte: mostramos imagen completa */
+    .tile img{width:100%;height:auto;display:block}
     .label{position:absolute;left:10px;bottom:10px;background:rgba(20,20,20,.7);color:#fff;padding:6px 8px;border-radius:8px;font-size:12px}
+
     .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
     .bar{display:flex;gap:8px;align-items:center;color:var(--ink-60)}
     .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
@@ -57,6 +60,10 @@
       .menu{grid-template-columns:1fr}
       .gallery{grid-template-columns:repeat(2,1fr)}
     }
+
+    /* Estilos Instagram widget (se adapta al ancho) */
+    .ig-embed{border:none;padding:0;margin:0}
+    .ig-embed iframe{width:100%;border:0;overflow:hidden}
   </style>
 </head>
 <body>
@@ -69,7 +76,7 @@
       <nav>
         <a href="#menu">Menú</a>
         <a href="#galeria">Galería</a>
-        <a href="#reservar" class="btn">Reservar</a>
+        <a href="https://www.instagram.com/porselia.piosy/" class="btn">Redes</a>
       </nav>
     </div>
   </header>
@@ -107,6 +114,7 @@
       </div>
     </section>
 
+    <!-- MENÚ -->
     <section class="section" id="menu">
       <div class="container">
         <h2>Menú</h2>
@@ -180,35 +188,43 @@
       </div>
     </section>
 
+    <!-- GALERÍA (se actualiza sola con tu Instagram) -->
     <section class="section" id="galeria">
       <div class="container">
         <h2>Galería</h2>
-        <div class="gallery">
+
+        <!-- Opción A: Instagram (recomendado). Genera tu widget y reemplaza el SRC del iframe -->
+        <div class="ig-embed">
+          <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+         
+          <iframe src="<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/7914ea3da13755e78f4532f0c7d35352.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>"
+                  title="Instagram feed"
+                  scrolling="no" allowtransparency="true"
+                  class="lightwidget-widget" style="width:100%;border:0;overflow:hidden"></iframe>
+        </div>
+
+        <!-- Opción B (fallback): cuadrícula estática SIN recorte (borra si ya usas el widget) -->
+        <div class="gallery" style="margin-top:18px">
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=800&auto=format&fit=crop" alt="Pasta fresca">
-            <figcaption class="label">Pasta fresca</figcaption>
+            <img src="https://images.unsplash.com/photo-1523986371872-9d3ba2e2f642?q=80&w=1080&auto=format&fit=crop" alt="Pasta fresca"><figcaption class="label">Pasta fresca</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1541745537413-b804f0f39f9f?q=80&w=800&auto=format&fit=crop" alt="Pizza al horno">
-            <figcaption class="label">Pizza al horno</figcaption>
+            <img src="https://images.unsplash.com/photo-1541745537413-b804f0f39f9f?q=80&w=1080&auto=format&fit=crop" alt="Pizza al horno"><figcaption class="label">Pizza al horno</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1604908176997-4314fe29d2ea?q=80&w=800&auto=format&fit=crop" alt="Antipasti">
-            <figcaption class="label">Antipasti</figcaption>
+            <img src="https://images.unsplash.com/photo-1604908176997-4314fe29d2ea?q=80&w=1080&auto=format&fit=crop" alt="Antipasti"><figcaption class="label">Antipasti</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1541782814452-dc8e95a8c1a9?q=80&w=800&auto=format&fit=crop" alt="Dolci">
-            <figcaption class="label">Dolci</figcaption>
+            <img src="https://images.unsplash.com/photo-1541782814452-dc8e95a8c1a9?q=80&w=1080&auto=format&fit=crop" alt="Dolci"><figcaption class="label">Dolci</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f4?q=80&w=800&auto=format&fit=crop" alt="Vinos">
-            <figcaption class="label">Vinos</figcaption>
+            <img src="https://images.unsplash.com/photo-1514361892635-6b07e31e75f4?q=80&w=1080&auto=format&fit=crop" alt="Vinos"><figcaption class="label">Vinos</figcaption>
           </figure>
           <figure class="tile">
-            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" alt="Ambiente">
-            <figcaption class="label">Ambiente</figcaption>
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1080&auto=format&fit=crop" alt="Ambiente"><figcaption class="label">Ambiente</figcaption>
           </figure>
         </div>
+
         <div class="cta">
           <a class="btn" href="https://www.instagram.com/porselia.piosy/" target="_blank" rel="noopener">Síguenos en Instagram</a>
           <a class="btn" href="#reservar">Reservar</a>
@@ -225,7 +241,6 @@
           <span>PORSELIA PIOSY <span class="sub" style="letter-spacing:.38em;font-size:10px;color:var(--ink-60)">PRIME</span></span>
         </div>
         <div>Margaritas 29-Interior 5, Florida, Álvaro Obregón, 01030 Ciudad de México, CDMX</div>
-        <div>+52 55 0000 0000</div>
         <div>Horarios: Mar–Dom · 13:00 – 00:00</div>
       </div>
       <div>
@@ -242,7 +257,8 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
-    // Envío por correo (abre cliente del usuario)
+
+    // Envío por correo (abre el cliente de correo del visitante)
     const TO_EMAIL = "isilevyg@gmail.com";
     const form = document.getElementById('form-reservas');
     if(form){
